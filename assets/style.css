@@ -1,0 +1,42 @@
+
+.navbar{
+	background color:grey;
+}
+.navbar-brand{
+	color:red;
+}
+.preReq{
+	border:1px solid red;
+}
+.topBox{
+	padding-bottom:30px;
+}
+.preReqBox{
+	padding-bottom:30px;
+}
+.heading{
+	/*text-align: center;*/
+}
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link{
+    background-color: red;
+}
+.contactPill{
+	background-color: green;
+}
+.nav-link{
+	color:black;
+}
+.documentationLink{
+	color:red;
+	font-weight:bold;
+}
+a:hover{
+	color:red;
+}
+.img-responsive {
+    margin: 0 auto;
+    padding-bottom:17px;
+}
+.bottomPad {
+    padding-bottom:50px;
+}

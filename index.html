@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verizon Framework v4</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="navBox">	
+		<ul class="nav justify-content-center nav-pills red">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="index.html">Intro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="modular.html">Modular</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="xml.html">XML</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="cyberark.html">CyberArk</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="logging.html">Logging</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="variables.html">Variables</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link documentationLink" href="documentation.html">Documentation</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="tips.html">Tips</a>
+		  </li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+		 	<div class="topBox">
+			  <h1 class="display-3 text-center"><img class = "img-responsive" src="assets/images/vzLogo.png">Framework v4</h1>
+			  	<p class="lead text-center"><br>This is a guide and introduction into the framework deployed in Verizon FinOps. <br>The intention of this tool is to provide developers with a more seamless transition from idea to production BOT.</p>
+			  <hr class="my-4">
+			  	<h2 class="text-center pageTitle">Intro</h2>
+			  <hr class="my-4">
+			    <h2 class="heading">Why use a Framework</h2>
+				<p class="lead">When approaching RPA in an enterprise environment, there is a lot to consider. As a team, we are attempting to hit a moving target in regards to creating an effective system that many developers can be creative in, allowing them to solve problems. As well, we have a need to manage these processes as they transition through different environments, namely the Development (Dev) and Production (Prod) environments. 
+				A framework is designed to help in the management of these processes, as well as the development of these processes. It is designed to give the developer a canvas which isn’t completely blank, but has some features which will be necessary to navigate the Software Development Lifecycle (SDLC) in changing environments. 
+				Some of the processes needed to move to production are removed, or alleviated from the developer by utilizing the framework. 
+				Where do I house my share-drive dependencies? 
+				How do I connect to CyberArk?
+				How do I create an XML, or read from that file?
+				Where should all of these things go so that they follow a pattern? 
+				How do I implement flow control and logging?
+				These are just a few of the problems solved by the framework, and deployed to each developer.</p>
+			</div>
+
+			<div class="list-group preReqBox">
+		      <hr class="my-4">
+			    <h2 class="heading">Where to find the Framework</h2>
+			  	<p class="lead">This tool can be downloaded fromt the repository onto the development machine. <br>The following are the sets of required dependencies:</p>
+			  <a class="list-group-item list-group-item-action flex-column align-items-start preReq">
+			    <div class="d-flex w-100 justify-content-between">
+			      <h5 class="mb-1">Group XML File</h5>
+			      <small>AA Repo</small>
+			    </div>
+			    <p class="mb-1">This file can be found in the AA Repo under "MyDocs/Framework/Framework_v4_YOUR-GROUP_v1.xml".<br>This file holds all of the information your Framework will need in order to create your directork in the correct structure and load all of your group's dependencies.</p>
+			    <small class="text-muted">Dont forget to choose the ones for your group.<br>You can only have ONE of these files.</small>
+			  </a>
+			  <a class="list-group-item list-group-item-action flex-column align-items-start preReq">
+			    <div class="d-flex w-100 justify-content-between">
+			      <h5 class="mb-1">NewAutomationProject_V4</h5>
+			      <small>AA Repo</small>
+			    </div>
+			    <p class="mb-1">These files can be found in the AA Repo under "My Tasks\NewAutomationProject_V4". <br>This includes the main ATMX file as well as the five corresponding files in your workgroup's folder.<br>XML and CyberArk<br>0.2 Environment Housekeeping<br>LoggingTask<br>MainFramework<br>SubTask</p>
+			    <small>Dont forget to choose the ones for your group.</small>
+		      </a>
+			</div>
+			
+			<div class="updatesBox">
+				<hr class="my-4">
+				<h2 class="heading">Changes updated in Version 4</h2>
+				<ul class="list-group">
+				  <li class="list-group-item">The ability to point to different share-drives, CyberArk Vaults, and to vary objects based on the group/department of the developer. </li>
+				  <li class="list-group-item">The input archives and the outputs on the share-drives are compressed.</li>
+				  <li class="list-group-item">The input/output scheme is augmented to be more comprehensive and streamlined.</li>
+				  <li class="list-group-item">There is a Master-XML implemented to point to the group, drive, and vault for each group.</li>
+				  <li class="list-group-item">If-Logic to pick an XML based on the system name, allowing for scalable deployment.</li>
+				  <li class="list-group-item">UserName, group, is added to the initial XML.</li>
+				  <li class="list-group-item">Input validation and formatting on the project name.</li>
+				  <li class="list-group-item">Run-Mode is added to allow for password prompt in Dev environment.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contactBox">
+		<ul class="nav justify-content-center nav-pills">
+			<li class="nav-item">
+			    <!-- <a class="nav-link contactPill" href="index.html">Contact</a> -->
+				<a class="nav-link contactPill" href="mailto:william.reed@one.verizon.com?Subject=FrameWork_Question" target="_top">Contact</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

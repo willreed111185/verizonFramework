@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verizon Framework v4</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="navBox">	
+		<ul class="nav justify-content-center nav-pills">
+		  <li class="nav-item">
+		    <a class="nav-link" href="index.html">Intro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="modular.html">Modular</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link active" href="xml.html">XML</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="cyberark.html">CyberArk</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="logging.html">Logging</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="variables.html">Variables</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link documentationLink" href="documentation.html">Documentation</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="tips.html">Tips</a>
+		  </li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+		<div class="jumbotron">	
+			<h1 class="display-3 text-center"><img class = "img-responsive" src="assets/images/vzLogo.png">Framework v4</h1>
+			<hr class="my-4">
+			<h2 class="text-center pageTitle">XML</h2>
+			<div class="updatesBox">
+				<hr class="my-4">
+				<h2 class="heading">Latest Changes</h2>
+				<ul class="list-group">
+				  <li class="list-group-item">Production Mode is reconfigured</li>
+				  <li class="list-group-item">UserName is added to the pre-populated file</li>
+				  <li class="list-group-item">Group is added and used to determine sharedrive and CyberArk details</li>
+				</ul>
+			</div>
+			<div class = "xmlInfoBox contentBox">
+				<hr class="my-4">
+				<h2 class="heading">XML General Info</h2>
+				<p>The XML file is created when the framework is kicked off with a new project. This file is used to convey information to AA about constants which the script will need to run effectively by initializing variables and allowing for rapid scaling. <br><br>Let’s take a look at why we need this:</p>
+				<hr class="my-4">
+				<h2 class="heading">Initialization</h2>
+				<p>If we were to program a username into a script for a system, when we move the BOT to a new environment we will need to change that information. If a URL for a website changes (but the site stays the same) we may want to be able to access that outside the script. If we have a list of email recipients, that list may change and we don’t necessarily want to reprogram our AA script to do so. If our input folder changes from one drive to another, be it because of environment changes or some other administrative needs, we don’t want to redevelop our AA files to accommodate that.</p>
+				<hr class="my-4">
+				<h2 class="heading">Scaling</h2>
+				<p>The XML, as implemented in the framework, also allows for us to scale our processes. If we have an identical process which needs to run on two machines (box1) and (box2), we can simply rename the scripts to incorporate the names into the XML and the framework will know which file to open. Box1 will be assigned UserName1 and Box2 will be assigned UserName2 so long as the files are named accordingly. This allows for not only two, but virtually an unlimited number of BOTs to utilize the script without ever changing the AA files which were developed.</p>
+			</div>
+			<div class="resourcesBox">
+				<hr class="my-4">
+				<h2 class="externalResources">External Resources</h2>
+				<ul class="list-group">
+				  <li class="list-group-item"><a href="https://www.w3schools.com/xml/default.asp">W3-School</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contactBox">
+		<ul class="nav justify-content-center nav-pills">
+			<li class="nav-item">
+			    <!-- <a class="nav-link contactPill" href="index.html">Contact</a> -->
+				<a class="nav-link contactPill" href="mailto:william.reed@one.verizon.com?Subject=FrameWork_Question" target="_top">Contact</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

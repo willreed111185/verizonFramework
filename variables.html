@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verizon Framework v4</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="navBox">	
+		<ul class="nav justify-content-center nav-pills">
+		  <li class="nav-item">
+		    <a class="nav-link" href="index.html">Intro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="modular.html">Modular</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="xml.html">XML</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="cyberark.html">CyberArk</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="logging.html">Logging</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link active" href="variables.html">Variables</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link documentationLink" href="documentation.html">Documentation</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="tips.html">Tips</a>
+		  </li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+		<div class="jumbotron">	
+			<h1 class="display-3 text-center"><img class = "img-responsive" src="assets/images/vzLogo.png">Framework v4</h1>
+			<hr class="my-4">
+			<h2 class="text-center pageTitle">Variables</h2>
+			<p class="text-center">These variables are used throughout the framework and can be utilized by a developer to exploit the built-in functionality</p>
+			<div class="updatesBox">
+				<hr class="my-4">
+				<h2 class="heading">Latest Changes</h2>
+				<dl class="list-group">
+				  <dt class="list-group-item">xGroup</dt>
+				  <dd class="list-group-item">designates the assigned work group (Accounting, FSG, Commissions, etc) - do not change</dd>
+				  <dt class="list-group-item">vPassword</dt>
+				  <dd class="list-group-item">stores the active password as assigned in XML/CyberArk Subscript - can replicate to handle multiple credentials</dd>
+				  <dt class="list-group-item">vProductionMode</dt>
+				  <dd class="list-group-item">choose between "Run", "Dev" (cyberark), and "Prod" (cyberark). can be used to switch dependent logic within script</dd>
+				  <dt class="list-group-item">xShareDriveRoot</dt>
+				  <dd class="list-group-item">url path to the main folder for the automation</dd>
+				  <dt class="list-group-item">xUserName</dt>
+				  <dd class="list-group-item">assigned variable from the XML. upon project creation it is autopopulated with system id. can be changed</dd>
+				</dl>
+			</div>
+			<div class="variableListBox contentBox">
+				<hr class="my-4">
+				<h2 class="heading">Variable List</h2>
+				<dl class="list-group">
+					<dt class="list-group-item">vCyberArkUserName</dt>
+					<dd class="list-group-item">passed to CyberArk via VBA script. will be used to query vault. can be replicated to query multiple.</dd>
+					<dt class="list-group-item">vLogErrorDate</dt>
+					<dd class="list-group-item">sent to Main from SubTask to be used in error logging</dd>
+					<dt class="list-group-item">vLogErrorline</dt>
+					<dd class="list-group-item">sent to Main from SubTask to be used in error logging</dd>
+					<dt class="list-group-item">vLogErrorMsg</dt>
+					<dd class="list-group-item">sent to Main from SubTask to be used in error logging</dd>
+					<dt class="list-group-item">vLogFileWorking</dt>
+					<dd class="list-group-item">path to XLSX log file on the local machine</dd>
+					<dt class="list-group-item">vMainStatus</dt>
+					<dd class="list-group-item">status of the main task. can be used to determine flow control or logging procedure</dd>
+					<dt class="list-group-item">vPassword</dt>
+					<dd class="list-group-item">stores the active password as assigned in XML/CyberArk Subscript - can replicate to handle multiple credentials</dd>
+					<dt class="list-group-item">vProductionMode</dt>
+					<dd class="list-group-item">choose between "Run","Dev" (cyberark),and "Prod" (cyberark). can be used to switch dependent logic within script</dd>
+					<dt class="list-group-item">vStatusSubTask</dt>
+					<dd class="list-group-item">status of the current subtask, passed back to main by error handling. can be used to determine flow control or logging procedure</dd>
+					<dt class="list-group-item">vSubTaskName</dt>
+					<dd class="list-group-item">name of the current subtask</dd>
+					<dt class="list-group-item">vTaskName</dt>
+					<dd class="list-group-item">name of the current task</dd>
+					<dt class="list-group-item">vTimeStamp</dt>
+					<dd class="list-group-item">time assigned with script is initiated. can be used for folder structure or for other instances as a unique identifier. should be used in conjunction with system(user) in the event of scaling to differentiate concurrent process runs</dd>
+					<dt class="list-group-item">vWorkingFilePath</dt>
+					<dd class="list-group-item">path to local directory created. input files are copied here at runtime for local use by BOT</dd>
+					<dt class="list-group-item">xArchiveSharePath</dt>
+					<dd class="list-group-item">archive path on share drive. input files are copied here at runtime for audit purpose/tracking</dd>
+					<dt class="list-group-item">xCOELogPath</dt>
+					<dd class="list-group-item">path to TXT log path located on share drive. written to over network to prevent loss of content</dd>
+					<dt class="list-group-item">xCyberArkVault</dt>
+					<dd class="list-group-item">the name of the vault assigned to script due to group assignment. assigned at project creation</dd>
+					<dt class="list-group-item">xGroup</dt>
+					<dd class="list-group-item">designates the assigned work group (Accounting, FSG, Commissions, etc) - do not change</dd>
+					<dt class="list-group-item">xInputSharePath</dt>
+					<dd class="list-group-item">share drive location where input files can be dropped and auto copied to local Working directory (to be later copied to Output archive on share drive</dd>
+					<dt class="list-group-item">xLogFilePath</dt>
+					<dd class="list-group-item">path to share drive location for the XLSX log. this log is accessable from the Working directory after it is auto copied by the framework.</dd>
+					<dt class="list-group-item">xOutPutSharePath</dt>
+					<dd class="list-group-item">this is the share drive path where the Working directory is copied at bot completeion. this is Zipped by the framework - can be changed by user if desired</dd>
+					<dt class="list-group-item">xProductionMode</dt>
+					<dd class="list-group-item">choose between "Run","Dev" (cyberark),and "Prod" (cyberark). can be used to switch dependent logic within script</dd>
+					<dt class="list-group-item">xShareDriveRoot</dt>
+					<dd class="list-group-item">url path to the main folder for the automation</dd>
+					<dt class="list-group-item">xTaskKillPath</dt>
+					<dd class="list-group-item">path to file used in Environmental/Housekeeping subtask to stop preceeding tasks which may impeed BOT success. This is localized for each project. can be changed to suit individual needs via .cmd file</dd>
+					<dt class="list-group-item">xUserName</dt>
+					<dd class="list-group-item">assigned variable from the XML. upon project creation it is autopopulated with system id. can be changed</dd>
+				</dl>
+			</div>
+			<div class="resourcesBox">
+				<hr class="my-4">
+				<h2 class="externalResources">External Resources</h2>
+				<ul class="list-group">
+				  <li class="list-group-item"><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contactBox">
+		<ul class="nav justify-content-center nav-pills">
+			<li class="nav-item">
+			    <!-- <a class="nav-link contactPill" href="index.html">Contact</a> -->
+				<a class="nav-link contactPill" href="mailto:william.reed@one.verizon.com?Subject=FrameWork_Question" target="_top">Contact</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verizon Framework v4</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="navBox">	
+		<ul class="nav justify-content-center nav-pills">
+		  <li class="nav-item">
+		    <a class="nav-link" href="index.html">Intro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="modular.html">Modular</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="xml.html">XML</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="cyberark.html">CyberArk</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="logging.html">Logging</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="variables.html">Variables</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link active documentationLink" href="documentation.html">Documentation</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="tips.html">Tips</a>
+		  </li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+		<div class="jumbotron">	
+			<h1 class="display-3 text-center"><img class = "img-responsive" src="assets/images/vzLogo.png">Framework v4</h1>
+			<hr class="my-4">
+			<h2 class="text-center pageTitle">Documentation</h2>
+			<p class="text-center">This is a intended to show a developer how to navigate through the initial setup of a framework as well as the development within a framed project.</p>
+			<div class="navBox">	
+				<ul class="nav justify-content-center nav-pills">
+				  <li class="nav-item">
+				    <a class="nav-link" href="#whatItDoes">What It Does</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#whatItDoes">Initial Launch</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#MainTask">MainTask</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#CyberArk">CyberArk</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#Environmental">Environmental Housekeeping</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#subtask">Subtask</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#logging">Logging</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="firstStepsBox">
+				<hr class="my-4">
+				<h2 class="heading">First Steps</h2>
+				<ul class="list-group">
+				  <li class="list-group-item">Download the framework from the Repository at "MyDocs/Framework/Framework_v4_YOUR-GROUP_v1.xml".</li>
+				  <li class="list-group-item">Download the framework from the Repository at "My Tasks\NewAutomationProject_V4".</li>
+				</ul>
+			</div>
+			<div class="generalBox">
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="whatItDoes">What It Does</h2>
+				<p>This first page is intended to walk you through the process to make sure you have all of the prerequisites for the framework.</p>
+				<p>The framework uses a group XML, this tells the Main Framework Task (Main) what CyberArk Vault to import, what share drive you will be using, as well as which group you are a part of. <br>This file is the first thing which needs to be downloaded from the repo.</p>
+				<p>The framework then needs the Main ATMX file to be downloaded from the repo. This is what the developer will launch and what till build all of the proceeding elements.</p>
+				<p>When Main is ran, it will ask you for a project name. Let’s use “Blue $Company!” as an example. The script will first strip any special characters and white space, then it will add “_$System(USERNAME)$_$Day$_$Month$_$Year$_V1” to the end of it. You’d be left with “BlueCompany_reedwi4_09-19-2017_V1.</p>
+				<p>Main will then create the folder structure on the share drive and the local machine, copy all of the template tasks, then write the XML file. Below is a tree of the folder structure and files.</p>
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<div class="structureTree">
+				</div>
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="whatItDoes">Initial Launch</h2>
+				<img class="img-responsive bottomPad" src="assets\images\documentationInitial.png">
+				<p>Upon launching the framework, you will be prompted for the task name. This will launch and create the folder structure, and the following will be displayed in the AA console:</p>
+				<img class="img-responsive bottomPad" src="assets\images\AAFolderStructure.png">
+				<p>The main task console will looks like this:</p>
+				<img class="img-responsive bottomPad" src="assets\images\mainTaskConsole.png">
+				<p>The subtask console will looks like this:</p>
+				<img class="img-responsive bottomPad" src="assets\images\subTaskConsole.png">
+				<p>The sharedrive will now have a folder structure which looks like this:</p>
+				<img class="img-responsive bottomPad" src="assets\images\ShareFolderStructure.png">
+				<p>After running the first time, the local file structure will be created and will look like this:</p>
+				<img class="img-responsive bottomPad" src="assets\images\WorkingFolderStructure.png">
+				<p class="text-center">You should now be ready to start developing within the scripts.</p>
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="MainTask">MainTask</h2>
+				<p>The first section covers priming the status variables (used for flow control), initializing the Timestamp, resolving the Task Name (programatically), then running the <a href="#CyberArk">XML and CyberArk</a> subtask.A few more tests and variable initializations complete the first section of this code.</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskInitializeVariables.png">
+				<p>The next section is the <a href="#Environmental">Environmental Housekeeping</a> section. This section is responsible for assuring that all of the necessary background application status's are correct and that all file/folders that may need to be removed are done so.</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskEnvironmental.png">
+				<p>The next section of the code, and is responsible for copying all of the inputs from the share drive (Input Folder and Log Files), zips the Input Folder into the Archive Folder on the share drive, and deletes the Input Folder on the share drive (so that it's empty for the next iteration). This deletion feature can be turned off if it isn't needed (don't forget to delete the step that recreates the folder as well).</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskCopyFolders.png">
+				<p>This section of the code is responsible for calling a <a href="#subtask">subtask</a>. The If/End If is what handled the flow-control, and the logging is handled as well. This section can be replicated to handle many subtasks by simply copy/pasting the block of code.</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskFirstSubTask.png">
+				<p>This is an example of two subtasks being called. The only change is the URL for the subtask you are utilizing (You can rename the task from "1.0 Subtask" to something that better fits your task).</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskSecondSubTask.png">
+				<p>This section of the code handled the Business Unit Logging. The Framework determines whether the task and subtask completed successfully, and then notes the XLSX file accordingly.</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskLogFiles.png">
+				<p>This is the final section of code in the Main Task. This section handles the closing operations of the script. The files in the Working directory are zipped and copied to the sharedrive in the Output folder (zipping isn't a requirement but recommended due to ease and capacity). The Business Unit log file on the share drive is deleted before being replaced with the new log file Some final notes are logged in the COE file and the Main Task is completed.</p>
+				<img class="img-responsive bottomPad" src="assets\images\maintaskClosing.png">
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="CyberArk">XML and CyberArk</h2>
+				<p>This is the first section of the XML/Cyberark Subtask. This is responsible for opening the XML file (in the background) and setting the individual variables according to the nodes.</p>
+				<p>The IF/ELSE section is designed allow the RPA to scale. it does this by choosing the file with the system(USERNAME) in the name by default. If you have one without the username in it, it will use that as a backup.</p>
+				<img class="img-responsive bottomPad" src="assets\images\cyberarkXML.png">
+				<p>The second section of this subtask is used to call upon CyberArk (when not in "Run" mode), or to prompt for a password. This can be used and replicated to handle multiple passwords. However, only one mode can be selected at a time. The password in either case will be assigned to vPassword, but this can be changed to suit multiple passwords.</p>
+				<img class="img-responsive bottomPad" src="assets\images\cyberarkPassword.png">
+				<p>This is what the XML file looks like. Highlighted is the opening and closing "tags" (notice the slash in the closing tag). When you add a new element/variable to the XML file, this is the format which needs to be used. The line starting with containing the green text is a comment, and that formatting can be replicated to create a new comment if you choose to do so. The "Project-Name" opening and closing tags can be renamed to your project name, but this isn't absolutely necessary (it is recommended however).</p>
+				<img class="img-responsive bottomPad" src="assets\images\cyberarkXMLFile.png">
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="Environmental">Environmental Housekeeping</h2>
+				<p>This short subtask calls on a .cmd file to be executed. This CMD file is exclusive to the project and it can be augmented to suit the individual needs of the task.</p>
+				<img class="img-responsive bottomPad" src="assets\images\environmentalHousekeeping.png">
+				<p>This is what the killTask looks like, feel free to change this as you need. It can be opened and edited in Notepad++ which should be available on all of the VMs.</p>
+				<img class="img-responsive bottomPad" src="assets\images\killTask.png">
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="subtask">Subtask</h2>
+				<p>This is the smallest and likely the most important subtask. It's where the developer will be doing their work. As noted in the comments (please use lots of comments throughout your work), between the error handling brackets is where the process will begin and end for a particular subtask. Your variables from your XML will be passed to Main. Main will pass them to the subtasks, and here you will use them to do "things". Essentially, the framework is purposed to provide you with all of the structure, security, and usability features so that you can start it up and get to writing ASAP. <br>Enjoy!</p>
+				<img class="img-responsive bottomPad" src="assets\images\subtask.png">
+			  </div>
+			  <div>
+				<hr class="my-4">
+				<h2 class="heading" id="logging">Logging</h2>
+				<p>There is a built in feature to the framework for logging your process in two ways, as a text document and as a spreadsheet. There is a slightly different process for a successful or unsuccessful process, and this can be changed by the developer to suit the needs of the particular process or reporting requirements.</p>
+				<img class="img-responsive bottomPad" src="assets\images\logging.png">
+				<p>This is a glimpse of the spreadsheet log template. It is designed to handle this column layout, however please feel free to augment this and expand it to handle as much as you'd like to report for the process you're developing.</p>
+				<img class="img-responsive bottomPad" src="assets\images\loggingBUTemplate.png">
+				<p>This is a snapshot of a COE log file which has been used for a script in development. This offers a glimpse into the format and capability. Styling and formatting is important so that iterations and important information stand out. Please feel free to add styling to suit your needs, there is a lack of styling in this particular demo.</p>
+				<img class="img-responsive bottomPad" src="assets\images\loggingCOEexample.png">
+			  </div>
+			  <hr class="my-4">
+			  <p class="text-center">Welcome to Verizon's Framework V4. Enjoy.</p>
+			  <p class="text-center"><a href="#">Top of Page</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="contactBox">
+		<ul class="nav justify-content-center nav-pills">
+			<li class="nav-item">
+			    <!-- <a class="nav-link contactPill" href="index.html">Contact</a> -->
+				<a class="nav-link contactPill" href="mailto:william.reed@one.verizon.com?Subject=FrameWork_Question" target="_top">Contact</a>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verizon Framework v4</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="navBox">	
+		<ul class="nav justify-content-center nav-pills">
+		  <li class="nav-item">
+		    <a class="nav-link" href="index.html">Intro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link active" href="modular.html">Modular</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="xml.html">XML</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="cyberark.html">CyberArk</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="logging.html">Logging</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="variables.html">Variables</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link documentationLink" href="documentation.html">Documentation</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="tips.html">Tips</a>
+		  </li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+		<div class="jumbotron">	
+			<h1 class="display-3 text-center"><img class = "img-responsive" src="assets/images/vzLogo.png">Framework v4</h1>
+			<hr class="my-4">
+			<h2 class="text-center pageTitle">Modular</h2>
+			<p>It is important to “Think like a Developer” when approaching Robotic Process Automation (RPA). Nowhere is this more important than the design and implementation concepts of modularity. </p>
+			<!-- <div class="updatesBox">
+				<hr class="my-4">
+				<h2 class="heading">Latest Changes</h2>
+				<ul class="list-group">
+				  <li class="list-group-item">No changes were made to the modularity of the framework.</li>
+				</ul>
+			</div> -->
+			<div class = "xmlInfoBox contentBox">
+				<hr class="my-4">
+				<h2 class="heading">Why Be Modular</h2>
+				<p>Modularity is a concept, it's not finite. Think of it like organization, it's all relative really. However, it lends an ability to be a more effective developer, to have more organized code, to plan accordingly, to have small victories, to fight small battles, and to reuse what you've created.</p>
+				<hr class="my-4">
+				<h2 class="heading">Lets Make Coffee</h2>
+				<p>When you think about all of the tasks to complete a process, the list can be daunting.  Let’s think about the process of getting ready for work. For some, this means making taking a shower, making coffee, walking the dog, getting the kids ready and maybe even packing lunches. If we were to write this all out, line by line, it would probably be a usable process, which will work for one person. However, let’s say we write down directions for making coffee. We also write down directions for packing a lunch, showering, and everything we mentioned previously.</p>
+				<p>Now, we have a list of independent functional tasks. They may be dependent on other things, and that’s fun. However, you have directions on how to make coffee. You can give them to your spouse, and now they can make coffee. Each of our children can now execute a sandwich making procedure and pack their own lunches. You can pass this process off to a coworker, and now just as simply as giving them your grandmothers’ cheesecake recipe they can function with your morning procedure.<br><br>This is the same thing for a machine.</p>
+				<hr class="my-4">
+				<h2 class="heading">Reduce, Reuse, Recycle</h2>
+				<p>I'm sure we all heard this in elementary school regarding waste. This applies to coding as well. We want to reduce the amount of code we write, we want to reuse things which we have previously built, and we want to recycle processes from one project in another.</p>
+				<p>If you need to log into a system and check a status of something, that can be treated as a task and scripted as a task. That task can be called time and time again to do the same thing and it can be called by many different machines to do the same thing. It’s important to consider the ability to independently operate given a certain set of inputs, and to use those as variables passed to the subtask (also referred to as an argument). If you’re logging into a site, make sure the subscript has the URL for the site, and the username/password combination handed to it from the main task. This way, many different credentials can be used and a change to the URL can be handled (think XML). <br><br>Now, we have smaller and more manageable tasks and we have an ability to reuse their functionality.</p>
+			</div>
+			<div class="resourcesBox">
+				<hr class="my-4">
+				<h2 class="externalResources">External Resources</h2>
+				<ul class="list-group">
+				  <li class="list-group-item"><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contactBox">
+		<ul class="nav justify-content-center nav-pills">
+			<li class="nav-item">
+			    <!-- <a class="nav-link contactPill" href="index.html">Contact</a> -->
+				<a class="nav-link contactPill" href="mailto:william.reed@one.verizon.com?Subject=FrameWork_Question" target="_top">Contact</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
